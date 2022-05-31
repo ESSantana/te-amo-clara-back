@@ -13,6 +13,11 @@ export default {
             'application/json': schema,
           },
         },
+        cors: {
+          methods: ["ANY" as const],
+          headers: ["mode", "content-type", "Access-Control-Allow-Origin", "origin"],
+          origin: "*"
+        }
       },
     },
   ],
