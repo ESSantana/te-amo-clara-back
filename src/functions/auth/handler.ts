@@ -9,24 +9,26 @@ import schema from './schema';
 const auth: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
 
   const { encryptedPassword } = event.body;
-  console.log({sitePass: process.env.SITE_PASSWORD, encryptedPassword});
   const password = AES.decrypt(encryptedPassword, "grinch").toString(enc.Utf8);
 
-  
-  if (password !== process.env.SITE_PASSWORD) {
-    return formatJSONResponse(403, {
-      message: "Senha totalmente errada meu nobre",
-    });
-  }
-
-  const payload = {
-    name: 'Iracema Clara',
-    userId: 1,
+  let payload = {
+    name: 'outros',
+    userId: 9,
     accessTypes: [
-      'verTudo',
-      'fazerTudo'
+      'verSiteMocado'
     ]
   };
+
+  if (password.toLowerCase() === process.env.SITE_PASSWORD) {
+    payload = {
+      name: 'iracema clara',
+      userId: 1,
+      accessTypes: [
+        'fazerTudo'
+      ]
+    };
+  }
+
 
   const token = sign(payload, "grinch", {
     algorithm: 'HS256',

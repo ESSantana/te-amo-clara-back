@@ -1,6 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 
-import auth from '@functions/auth';
+import { auth, cloudfront } from '@functions/index';
 
 const serverlessConfiguration: AWS = {
   service: 'te-amo-clara-back',
@@ -17,11 +17,13 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
-    SITE_PASSWORD: "${ssm:/site-password}",
+      SITE_PASSWORD: "${ssm:/site-password}",
+      PRIVATE_RESOURCE: "${ssm:/private-front-end-resource}",
+      MOCK_RESOURCE: "${ssm:/mock-front-end-resource}",
     },
   },
   // import the function via paths
-  functions: { auth },
+  functions: { auth, cloudfront },
   package: { individually: true },
   custom: {
     esbuild: {
