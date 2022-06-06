@@ -1,9 +1,9 @@
-import type { ValidatedEventAPIGatewayProxyEvent } from '@libs/api-gateway';
-import { formatJSONResponse } from '@libs/api-gateway';
-import { middyfy } from '@libs/lambda';
+import type { ValidatedEventAPIGatewayProxyEvent } from "@libs/api-gateway";
+import { formatJSONResponse } from "@libs/api-gateway";
+import { middyfy } from "@libs/lambda";
 import { text, textMock } from "./text";
 
-import { decode } from 'jsonwebtoken';
+import { decode } from "jsonwebtoken";
 
 const auth: ValidatedEventAPIGatewayProxyEvent<any> = async (event) => {
   const { Authorization } = event.headers;
@@ -11,7 +11,13 @@ const auth: ValidatedEventAPIGatewayProxyEvent<any> = async (event) => {
   const decodedToken = decode(Authorization, { json: true });
 
   let cloudFrontLink: string;
-  let textComplement: { [key: string]: string };
+  let textComplement: { [key: string]: string[] };
+
+  if (decodedToken.exp < Date.now() / 1000) {
+    return formatJSONResponse(401, {
+      error: "Unauthorized expired token",
+    });
+  }
 
   if (decodedToken.name === "iracema clara") {
     cloudFrontLink = process.env.PRIVATE_RESOURCE;
