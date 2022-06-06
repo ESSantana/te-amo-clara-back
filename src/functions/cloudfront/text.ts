@@ -1,6 +1,15 @@
 const text = {
   titles: ["Para o amor de toda minha vidinha", "Musa da OMS"],
-  paragraphes: ["Como tudo começou", "Porque eu te amo", "Coisas engraçadas"],
+  paragraphes: [
+    "Sério mesmo que tu achou que a pessoa que não tem coordenação motora pra comer com hashi ia fazer algum presente com as mãos e arriscar arruinar o primeiro dia dos namorados??? \
+    Inocente demais você, mas quem diria que uma corridinha de manhã ia virar tudo isso, que nosso segundo encontro seria na praia com os seus pais e que em pouco eu estaria \
+    esperando você e dona Eralda amolarem alicates num sábado de manhã, foram tantas coisas que aconteceram tão rápido pra quem queria ir devagar kkkj, \
+    e mesmo quando você levantou uma bandeirinha vermelha não deu pra trás, até porque quem anda de costas é carangueijo não é? Uma princesinha (muito clichê isso) \
+    que se transformou na Fiona, momentos marcados por vários \"Que sabor\" e alguns \"Rabuuuuuda, Xere....\" que me fazem rir e as vezes me assustam quando vêm de repente. \
+    (In)Felizmente tudo começou no 100% de cara, com certeza não é uma história de amor que podemos contar para crianças e nem tão pouco seria roteiro pra filme de princesa da disney, \
+    mas é foi uma ótima forma de começar, fugindo do comum e totalmente na ocasionalidade",
+    "Porque eu te amo",
+    "Coisas engraçadas"],
   cards: [
     "Infelizmente descobri que eu não sou seu primeiro namorado e cheguei tarde demais pra ser o seu primeiro \
     amor, mas espero ser o seu último namorado e o primeiro cara que vai te fazer feliz durante muito tempo, e que também \
