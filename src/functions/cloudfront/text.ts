@@ -20,7 +20,7 @@ const text = {
     no meu cu), não sei como seria esse ano se não tivesse você na minha vida, provavelmente seria mais um ano triste para o jovem brasileirinho aqui. Espero muito que esse \
     o primeiro de muitos anos juntos. Tem uma frase que tá faltando né? Mas calma que vai chegar na hora certa.',
     "Essa foi a primeira vez que te vi, foi nesse momento que sabia que queria você na minha vida, antes mesmo de te conhecer, você já tinha me deixado bobo. Depois de tudo isso, \
-    ficou faltando te dizer uma coisa, mas foi premetitado pra ser aqui no final pois tudo que falei aqui demonstra um pouquinho desse sentimento, \
+    ficou faltando te dizer uma coisa, mas foi premeditado pra ser aqui no final pois tudo que falei demonstra um pouquinho desse sentimento, \
     mas direto ao ponto, Eu te amo Clara, se eu pudesse voltar no passado, eu escolheria te amar todas as vezes, não há nenhuma outra mulher com quem eu gostaria de estar \
     hoje que não fosse você, te amo nesse e em todos os outros multiversos! ❤️",
   ],
@@ -49,6 +49,18 @@ const text = {
 const textMock = {
   titles: ["Lorem Ipsum", "Lorem Ipsum"],
   paragraphes: [
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the\
+    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and\
+    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into\
+    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release\
+    of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software\
+    like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing\
+    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\
+    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially\
+    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum\
+    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of\
+    Lorem Ipsum",
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the\
     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and\
     scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into\
